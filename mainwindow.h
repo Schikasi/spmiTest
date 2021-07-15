@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <xmltest.h>
+
+#include <Testing/test.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +18,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
 private:
     Ui::MainWindow *ui;
+
+    XMLTest * test;
+
 };
 #endif // MAINWINDOW_H
