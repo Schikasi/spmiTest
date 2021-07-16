@@ -23,7 +23,8 @@ void SimpleTestView::ShowPreview()
     startTestButton->setSizePolicy(QSizePolicy::Maximum,QSizePolicy::Maximum);
     ui->verticalLayout->addWidget(startTestButton);
     ui->verticalLayout->setAlignment(startTestButton,Qt::AlignCenter);
-    connect(startTestButton, &QPushButton::clicked,this,&SimpleTestView::StartTest);
+    connect(startTestButton, &QPushButton::clicked,
+            this,&SimpleTestView::StartTest);
 }
 
 void SimpleTestView::StartTest()
@@ -34,7 +35,8 @@ void SimpleTestView::StartTest()
     completeTestButton->setSizePolicy(QSizePolicy::Maximum,QSizePolicy::Maximum);
     ui->verticalLayout->addWidget(completeTestButton);
     ui->verticalLayout->setAlignment(completeTestButton,Qt::AlignRight);
-    connect(completeTestButton, &QPushButton::clicked,this,&SimpleTestView::CompleteTest);
+    connect(completeTestButton, &QPushButton::clicked,
+            this,&SimpleTestView::CompleteTest);
 
     test->Start();
 
@@ -51,22 +53,7 @@ void SimpleTestView::StartTest()
     connect(navigateView, &SimpleNavigateView::PreviousQuestion,
             this,&SimpleTestView::PreviousQuestion);
 
-//    QHBoxLayout *navigationLayout = new QHBoxLayout(this);
-//    nextQuestionButton = new QPushButton("->",this);
-//    nextQuestionButton->setSizePolicy(QSizePolicy::Maximum,QSizePolicy::Maximum);
-//    nextQuestionButton->setShortcut(QKeySequence(Qt::Key_Right));
-//    connect(nextQuestionButton, &QPushButton::clicked,this,&SimpleTestView::NextQuestion);
-
-//    previousQuestionButton = new QPushButton("<-",this);
-//    previousQuestionButton->setSizePolicy(QSizePolicy::Maximum,QSizePolicy::Maximum);
-//    previousQuestionButton->setShortcut(QKeySequence(Qt::Key_Left));
-//    connect(previousQuestionButton, &QPushButton::clicked,this,&SimpleTestView::PreviousQuestion);
-
-//    navigationLayout->setAlignment(Qt::AlignCenter);
-//    navigationLayout->addWidget(previousQuestionButton);
-//    navigationLayout->addWidget(nextQuestionButton);
     ui->verticalLayout->addWidget(navigateView);
-    //ui->verticalLayout->addLayout(navigationLayout);
 
 }
 
