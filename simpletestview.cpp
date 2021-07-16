@@ -93,8 +93,9 @@ void SimpleTestView::CompleteTest()
 {
     DeleteWidget(completeTestButton);
     DeleteWidget(questView);
-    DeleteWidget(nextQuestionButton);
-    DeleteWidget(previousQuestionButton);
+    DeleteWidget(navigateView);
+    //DeleteWidget(nextQuestionButton);
+    //DeleteWidget(previousQuestionButton);
 
     test->Complete();
 

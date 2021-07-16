@@ -34,8 +34,6 @@ private:
     BaseTest *test = nullptr;
     QPushButton *completeTestButton = nullptr;
     QPushButton *startTestButton = nullptr;
-    QPushButton *previousQuestionButton = nullptr;
-    QPushButton *nextQuestionButton = nullptr;
     SimpleNavigateView *navigateView;
     OneOfWidget *questView = nullptr;                     //Должен быть базовый класс виджета вопроса
     TestReportWidget *reportView = nullptr;
